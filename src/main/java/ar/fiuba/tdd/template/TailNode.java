@@ -2,19 +2,19 @@ package ar.fiuba.tdd.template;
 
 class TailNode<T> extends Node<T> {
 
-    TailNode(){
+    TailNode() {
         super(null,null);
     }
 
-    public void addLast(Node<T> previous, T item){
+    public void addLast(Node<T> previous, T item) {
         previous.setNext(new Node<>(item, this));
     }
 
-    public T getData(){
+    public T getData() {
         throw new AssertionError();
     }
 
-    public Node<T> getNext(){
+    public Node<T> getNext() {
         throw new AssertionError();
     }
 }

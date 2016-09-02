@@ -7,50 +7,52 @@ import static org.junit.Assert.*;
 public class MainTests {
 
     @Test
-    public void newQueueIsNotNull(){ assertNotNull(new Queue());}
+    public void newQueueIsNotNull() {
+        assertNotNull(new Queue());
+    }
 
     @Test
-    public void newQueueIsEmpty(){
+    public void newQueueIsEmpty() {
         Queue<Integer> queue = new Queue<>();
         assertTrue(queue.isEmpty());
     }
 
     @Test
-    public void queueIsNotEmpty(){
+    public void queueIsNotEmpty() {
         Queue<Integer> queue = new Queue<>();
         queue.add(11);
         assertFalse(queue.isEmpty());
     }
 
     @Test
-    public void lengthIsOne(){
+    public void lengthIsOne() {
         Queue<Integer> queue = new Queue<>();
         queue.add(11);
         assertEquals(1,queue.size());
     }
 
     @Test
-    public void filledQueueViewTopElement(){
+    public void filledQueueViewTopElement() {
         Queue<Integer> queue = new Queue<>();
         queue.add(15);
         int top = queue.top();
         assertEquals(15,top);
     }
 
-    @Test (expected=AssertionError.class)
-    public void emptyQueueThrowsAssertionErrorForTop(){
+    @Test (expected = AssertionError.class)
+    public void emptyQueueThrowsAssertionErrorForTop() {
         Queue<Integer> queue = new Queue<>();
         queue.top();
     }
 
-    @Test (expected=AssertionError.class)
-    public void emptyQueueThrowsAssertionErrorForRemove(){
+    @Test (expected = AssertionError.class)
+    public void emptyQueueThrowsAssertionErrorForRemove() {
         Queue<Integer> queue = new Queue<>();
         queue.remove();
     }
 
     @Test
-    public void queueIsEmptyAfterDeleteLastElement(){
+    public void queueIsEmptyAfterDeleteLastElement() {
         Queue<Integer> queue = new Queue<>();
         queue.add(25);
         queue.remove();
@@ -58,7 +60,7 @@ public class MainTests {
     }
 
     @Test
-    public void queueHasSizeZeroAfterDeleteLastElement(){
+    public void queueHasSizeZeroAfterDeleteLastElement() {
         Queue<Integer> queue = new Queue<>();
         queue.add(25);
         queue.remove();
@@ -66,7 +68,7 @@ public class MainTests {
     }
 
     @Test
-    public void queueHasSizeThreeAfterThreeAdds(){
+    public void queueHasSizeThreeAfterThreeAdds() {
         Queue<Integer> queue = new Queue<>();
         queue.add(25);
         queue.add(35);
@@ -75,7 +77,7 @@ public class MainTests {
     }
 
     @Test
-    public void queueHasSizeTwoAfterThreeAddsAndOneRemove(){
+    public void queueHasSizeTwoAfterThreeAddsAndOneRemove() {
         Queue<Integer> queue = new Queue<>();
         queue.add(25);
         queue.add(35);
