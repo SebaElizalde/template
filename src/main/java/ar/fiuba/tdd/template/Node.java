@@ -1,11 +1,9 @@
 package ar.fiuba.tdd.template;
 
-import java.util.Objects;
-
 class Node<T> {
 
     private T data;
-    private Node<T> next;
+    Node<T> next;
 
     void setNext(Node<T> next){
         this.next = next;

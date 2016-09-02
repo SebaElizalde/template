@@ -1,7 +1,5 @@
 package ar.fiuba.tdd.template;
 
-import sun.awt.image.ImageWatched;
-
 class Queue<T> implements QueueInterface<T> {
 
     private LinkedList<T> list = new LinkedList<>();
