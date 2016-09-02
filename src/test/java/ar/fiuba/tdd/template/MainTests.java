@@ -7,11 +7,6 @@ import static org.junit.Assert.*;
 public class MainTests {
 
     @Test
-    public void dummy() {
-        assertEquals(0, 0);
-    }
-
-    @Test
     public void newQueueIsNotNull(){ assertNotNull(new Queue());}
 
     @Test
